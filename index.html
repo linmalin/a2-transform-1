@@ -2,14 +2,56 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<title>atransform</title>
 	<style>
-		div {
+	
+	/* Animation Ketframes*/
+@keyframes swapphoto{
+0%{opacity:1;}
+100%{opacity:1;}
+}
 
-		}
-		div
+@-webkit-keyframes swapphoto{
+0%{opacity:1;}
+100%{opacity:1;}
+}
+
+.animation{
+	margin:auto;
+	position:relative;
+	height:200px;
+	width:200px;
+}
+
+.image1{
+	opacity:0;
+	animation: swapphoto 5s infinite;
+	-webkit-animation: swapphoto 5s infinite;
+	float:left;
+	position:relative;
+	top:0px;
+	z-index:1;
+}
+
+.image2{
+opacity:0;
+animation: swapphoto 5s 5s 1;
+-webkit-animation: swapphoto 5s 5s 1;
+float:left;
+position: relative;
+top:-200px;
+z-index:1;
+
+}
+
 	</style>
 </head>
 <body>
-	<div></div>
+	<div class="animation">
+		<img class="image1" src="images/pink1.jpg">
+		<img class="image2" src="images/pink.jpg">
+		<img class="image3" src="imageskiss2.jpg">
+
+	</div>
 </body>
 </html>
